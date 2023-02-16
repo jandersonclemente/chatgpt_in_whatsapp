@@ -3,6 +3,7 @@ integrating chatGPT with WhatsApp using Venom and openAi API
 
 ## installation
 run npm i
+
 add a .env file with the following variables:
  - OPENAI_TOKEN
  - OPENAI_ORG_ID
