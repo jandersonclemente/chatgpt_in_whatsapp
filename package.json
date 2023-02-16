@@ -1,0 +1,23 @@
+{
+  "name": "thepeacefulbot",
+  "version": "1.0.0",
+  "description": "Integrating ChatGPT with WhatsApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bot",
+    "chatgpt",
+    "whatsapp"
+  ],
+  "author": "Janderson Clemente (based on Victor Harry article on TabNews)",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "node-env": "^0.1.6",
+    "openai": "^3.1.0",
+    "uninstall": "^0.0.0",
+    "venom-bot": "^4.3.7"
+  }
+}
