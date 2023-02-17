@@ -11,14 +11,20 @@ const openai = new OpenAIApi(configuration)
 
 const { create } = require('venom-bot')
 const { checkPhoneNumber } = require('./helper')
-const {getDavinciResponse, getDalleResponse} = require('./tools')
+
+const {
+    getDavinciResponse,
+    getDalleResponse,
+    getJsResponse
+} = require('./tools')
 
 const commands = async (client, message) => {
     if (!message.text.indexOf(" ")) return
 
     const iaCommands = {
         davinci3: settings.davinci_trigger,
-        dalle: settings.dalle_trigger
+        dalle: settings.dalle_trigger,
+        jshelper: settings.jshelper_trigger
     }
 
     const {text}    = message
@@ -46,6 +52,14 @@ const commands = async (client, message) => {
                     imgDescription,
                     settings.dalle_text
                 )
+            })
+
+            break
+
+        case iaCommands.jshelper:
+            getJsResponse(question, openai)
+            .then(response => {
+                client.sendText(destinationNumber, response)
             })
 
             break

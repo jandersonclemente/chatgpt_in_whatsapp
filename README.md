@@ -26,3 +26,5 @@ add a .env file with the following variables:
  After successfully setting it up, you'll only need to start a messagem with /bot to get a chatGPT responnse
  
  or with /img the get an AI generated image. 
+
+ there is a /js option to return Javascript examples, it a bit wonky now beacause it is in beta.
