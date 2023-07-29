@@ -19,7 +19,7 @@ const {
 } = require('./tools')
 
 const commands = async (client, message) => {
-    if (!message.text.indexOf(" ")) return
+  if (!message.hasOwnProperty("text") && message.type !== "chat") return;
 
     const iaCommands = {
         davinci3: settings.davinci_trigger,
